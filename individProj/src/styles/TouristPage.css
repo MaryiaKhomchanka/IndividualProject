@@ -1,0 +1,115 @@
+.tourist-page {
+  min-height: 100vh;
+  background-color: #12181f;
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+.tourist-layout {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.profile-card {
+  background-color: #1d242c;
+  border: 1px solid #2e3742;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+  margin-bottom: 35px;
+}
+
+.profile-card h1 {
+  font-size: 26px;
+  margin-bottom: 5px;
+}
+
+.profile-card p {
+  font-size: 15px;
+  margin: 10px 0;
+  color: #f1f5f9;
+}
+
+.profile-card p strong {
+  color: #94a3b8;
+}
+
+.tourist-nav-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.tourist-btn {
+  flex: 1;
+  padding: 12px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+  color: #ffffff;
+  transition: background-color 0.15s;
+}
+
+.btn-primary { background-color: #631d1d; }
+.btn-primary:hover { background-color: #852727; }
+.btn-secondary { background-color: #2e3742; border: 1px solid #475569; }
+.btn-secondary:hover { background-color: #475569; }
+.btn-danger { background-color: #421212; border: 1px solid #631d1d; }
+.btn-danger:hover { background-color: #631d1d; }
+
+.section-heading {
+  font-size: 20px;
+  color: #f1f5f9;
+  border-bottom: 1px solid #2e3742;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.booking-record-card {
+  background-color: #1d242c;
+  border: 1px solid #2e3742;
+  border-left: 5px solid #631d1d;
+  padding: 24px;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.booking-record-card p {
+  margin: 8px 0;
+}
+
+.status-tag {
+  background-color: #12181f;
+  padding: 4px 8px;
+  border-radius: 4px;
+  border: 1px solid #2e3742;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.room-alert-banner {
+  color: #4ade80;
+  margin: 15px 0 0 0;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.booking-action-btn.btn-checkout { 
+  background-color: #2e3742; 
+  border: 1px solid #631d1d; /* Subtle crimson edge tint */
+  color: #f1f5f9;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.booking-action-btn.btn-checkout:hover { 
+  background-color: #421212; /* Shifts to dark wine maroon on hover */
+  border-color: #852727;
+}
+
+.btn-checkin { background-color: #631d1d; }
+.btn-checkin:hover { background-color: #852727; }
+.btn-checkout { background-color: #fb923c; }
+.btn-checkout:hover { background-color: #ea580c; }

@@ -1,0 +1,128 @@
+
+:root {
+  --bg-main: #12181f;
+  --bg-card: #1d242c;
+  --accent-primary: #631d1d;
+  --accent-hover: #852727;
+  --accent-danger: #421212;
+  --text-main: #f1f5f9;
+  --text-muted: #94a3b8;
+  --border-color: #2e3742;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-main);
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  padding: 30px;
+  border-radius: 8px;
+  width: 100%;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4 {
+  color: var(--text-main);
+  margin-top: 0;
+}
+
+p {
+  color: var(--text-main);
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+input, select {
+  width: 100% !important;
+  padding: 12px !important;
+  margin-bottom: 20px !important;
+  background-color: var(--bg-main) !important;
+  border: 1px solid var(--border-color) !important;
+  color: var(--text-main) !important;
+  border-radius: 6px !important;
+  font-size: 14px !important;
+  box-sizing: border-box !important;
+  outline: none;
+}
+
+input:focus, select:focus {
+  border-color: var(--accent-primary) !important;
+  box-shadow: 0 0 0 2px rgba(99, 29, 29, 0.4);
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--accent-primary);
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: var(--accent-hover);
+}
+
+.link-button {
+  background: none !important;
+  color: var(--text-muted) !important;
+  padding: 0 !important;
+  width: auto !important;
+  text-decoration: underline;
+  font-weight: normal;
+  display: inline-block !important;
+}
+
+.link-button:hover {
+  color: var(--text-main) !important;
+}
+
+.error {
+  background-color: rgba(239, 68, 68, 0.1);
+  color: #f87171;
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.success {
+  background-color: rgba(34, 197, 94, 0.1);
+  color: #4ade80;
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid rgba(34, 197, 94, 0.2);
+  margin-bottom: 15px;
+  font-size: 14px;
+}

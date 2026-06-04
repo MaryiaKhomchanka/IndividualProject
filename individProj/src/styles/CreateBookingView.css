@@ -1,0 +1,85 @@
+.booking-page-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #12181f;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.booking-form-card {
+  background-color: #1d242c;
+  border: 1px solid #2e3742;
+  padding: 35px 30px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 480px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  box-sizing: border-box;
+}
+
+.booking-form-card h1 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 26px;
+}
+
+.booking-form-card label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #94a3b8;
+  text-transform: uppercase;
+}
+
+.booking-form-card input,
+.booking-form-card select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  background-color: #12181f;
+  border: 1px solid #2e3742;
+  color: #f1f5f9;
+  border-radius: 6px;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.booking-form-card input:focus,
+.booking-form-card select:focus {
+  border-color: #631d1d;
+}
+
+.booking-confirm-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #631d1d;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.booking-confirm-btn:hover {
+  background-color: #852727;
+}
+
+.booking-cancel-btn {
+  background: none;
+  color: #94a3b8;
+  border: none;
+  width: 100%;
+  text-align: center;
+  margin-top: 15px;
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.booking-cancel-btn:hover {
+  color: #f1f5f9;
+}

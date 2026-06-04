@@ -104,6 +104,7 @@ function AdminBookingManagementView() {
             <thead>
               <tr>
                 <th>ID</th>
+                <th>User ID</th>
                 <th>Interval Dates</th>
                 <th>Total Bill</th>
                 <th>Payment type</th>
@@ -117,6 +118,7 @@ function AdminBookingManagementView() {
               {bookings.map((b) => (
                 <tr key={b.id}>
                   <td>#{b.id}</td>
+                  <td><strong>User #{b.userId}</strong></td>
                   <td>{b.checkInDate} to {b.checkOutDate}</td>
                   <td>${b.totalPrice}</td>
                   <td>{b.paymentMethod}</td>

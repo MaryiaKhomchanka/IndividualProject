@@ -21,7 +21,8 @@ def get_admin_service(db: Session = Depends(get_db)) -> AdminService:
     return AdminService(
         userRepository=UserRepository(db),
         bookingRepository=BookingRepository(db),
-        roomTypeRepository=RoomTypeRepository(db)
+        roomTypeRepository=RoomTypeRepository(db),
+        roomRepository=RoomRepository(db)
     )
 
 def get_current_admin(authorization: str = Header(...)) -> int:
@@ -107,7 +108,8 @@ def get_bookings(
             paymentMethod=b.paymentMethod,
             bookingStatus=b.bookingStatus,
             paidStatus=b.paidStatus,
-            roomNumber=room_num
+            roomNumber=room_num,
+            userId=b.userId
         ))
     return response
 
@@ -130,7 +132,8 @@ def update_booking(
         paymentMethod=updated.paymentMethod,
         bookingStatus=updated.bookingStatus,
         paidStatus=updated.paidStatus,
-        roomNumber=room.roomNumber if room else None
+        roomNumber=room.roomNumber if room else None,
+        userId=updated.userId
     )
 
 

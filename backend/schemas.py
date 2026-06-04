@@ -57,6 +57,7 @@ class BookingResponse(BaseModel):
     bookingStatus: BookingStatus
     paidStatus: bool
     roomNumber: Optional[str] = None 
+    userId: int
 
     class Config:
         from_attributes = True

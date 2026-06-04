@@ -233,11 +233,13 @@ class AdminService:
         self,
         userRepository: UserRepository,
         bookingRepository: BookingRepository,
-        roomTypeRepository: RoomTypeRepository
+        roomTypeRepository: RoomTypeRepository,
+        roomRepository: RoomRepository,
     ):
         self.userRepository = userRepository
         self.bookingRepository = bookingRepository
         self.roomTypeRepository = roomTypeRepository
+        self.roomRepository = roomRepository
 
 
     def searchUsers(self, query: str) -> list[User]:
@@ -296,7 +298,13 @@ class AdminService:
         if not booking:
             raise HTTPException(status_code=404, detail="Target booking records not found.")
         
-       
+        if booking.bookingStatus == BookingStatus.CHECKED_IN and request.bookingStatus in [BookingStatus.INACTIVE, BookingStatus.CANCELLED]:
+            if booking.roomId:
+                room = self.roomRepository.findById(booking.roomId)
+                if room:
+                    room.status = RoomStatus.AVAILABLE
+                    self.roomRepository.save(room)
+        
         days = (request.checkOutDate - request.checkInDate).days
         if days <= 0:
             raise HTTPException(status_code=400, detail="Checkout date must be after Check-in date.")
